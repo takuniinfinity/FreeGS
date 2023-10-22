@@ -1,0 +1,15 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type canvas_item;
+
+uniform float waktu = 1.0;
+uniform bool hor = true;
+
+void vertex() {
+	if (hor) {
+		VERTEX.x = VERTEX.x*waktu;
+	} else {
+		VERTEX.y = VERTEX.y*waktu;
+	}
+}"
