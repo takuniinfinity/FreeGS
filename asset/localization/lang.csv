@@ -1,4 +1,27 @@
 ,id,en
 btn_play,MAIN,PLAY
 btn_setting,PENGATURAN,SETTING
+btn_about,TENTANG,ABOUT
 btn_exit,KELUAR,EXIT
+language_txt,Bahasa : ,Language : 
+about_txt,"FreeGS (C) 2023 Takuni Infinity.
+
+.:: Programmer ::.
+Thafa Fauzanli
+
+.:: Desainer Grafis ::.
+Thafa Fauzanli
+
+.:: Perangkat Lunak ::.
+Godot Game Engine 3.6.2
+Libreoffice Calc 5","FreeGS (C) 2023 Takuni Infinity.
+
+.:: Programmer ::.
+Thafa Fauzanli
+
+.:: Graphics Designer ::.
+Thafa Fauzanli
+
+.:: Software ::.
+Godot Game Engine 3.6.2
+Libreoffice Calc 5"

@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="about" type="Label"]
+margin_right = 40.0
+margin_bottom = 40.0
+text = "about_txt"
+align = 1

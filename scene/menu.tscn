@@ -1,21 +1,38 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scene/menu.gd" type="Script" id=1]
 [ext_resource path="res://theme/default.tres" type="Theme" id=2]
 [ext_resource path="res://asset/image/bg_menu.jpg" type="Texture" id=3]
 [ext_resource path="res://asset/font/ds_title.tres" type="DynamicFont" id=4]
+[ext_resource path="res://scene/menu/panel_option.gd" type="Script" id=5]
 [ext_resource path="res://shader/mat_hor.tres" type="Material" id=6]
 [ext_resource path="res://shader/mat_ver.tres" type="Material" id=7]
+[ext_resource path="res://asset/font/ds_subtitle.tres" type="DynamicFont" id=8]
+[ext_resource path="res://scene/menu/btn_option_mat.tres" type="Material" id=9]
+[ext_resource path="res://scene/menu/panel_mat.tres" type="Material" id=10]
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+void vertex() {
+	VERTEX.x = VERTEX.x*1.05 + cos(TIME)*5.0 - 10.0;
+	VERTEX.y = VERTEX.y*1.05 + sin(TIME)*5.0 - 10.0;
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
 
 [node name="menu" type="TextureRect"]
+material = SubResource( 2 )
 anchor_right = 1.0
 anchor_bottom = 1.0
+theme = ExtResource( 2 )
 texture = ExtResource( 3 )
 expand = true
 script = ExtResource( 1 )
 
 [node name="panel" type="Panel" parent="."]
-material = ExtResource( 7 )
+material = ExtResource( 10 )
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
@@ -24,7 +41,6 @@ margin_left = -340.0
 margin_top = -198.0
 margin_right = -16.0
 margin_bottom = 199.0
-theme = ExtResource( 2 )
 
 [node name="title" type="Label" parent="panel"]
 anchor_left = 0.5
@@ -48,7 +64,7 @@ margin_right = 150.0
 margin_bottom = -12.0
 
 [node name="btn_play" type="Button" parent="panel/container"]
-material = ExtResource( 6 )
+material = ExtResource( 9 )
 margin_right = 300.0
 margin_bottom = 42.0
 focus_mode = 0
@@ -56,7 +72,7 @@ enabled_focus_mode = 0
 text = "btn_play"
 
 [node name="btn_setting" type="Button" parent="panel/container"]
-material = ExtResource( 6 )
+material = ExtResource( 9 )
 margin_top = 46.0
 margin_right = 300.0
 margin_bottom = 88.0
@@ -64,13 +80,48 @@ focus_mode = 0
 enabled_focus_mode = 0
 text = "btn_setting"
 
-[node name="btn_exit" type="Button" parent="panel/container"]
-material = ExtResource( 6 )
+[node name="btn_about" type="Button" parent="panel/container"]
+material = ExtResource( 9 )
 margin_top = 92.0
 margin_right = 300.0
 margin_bottom = 134.0
 focus_mode = 0
 enabled_focus_mode = 0
+text = "btn_about"
+
+[node name="btn_exit" type="Button" parent="panel/container"]
+material = ExtResource( 9 )
+margin_top = 138.0
+margin_right = 300.0
+margin_bottom = 180.0
+focus_mode = 0
+enabled_focus_mode = 0
 text = "btn_exit"
 
+[node name="panel_option" type="Panel" parent="."]
+visible = false
+material = ExtResource( 7 )
+anchor_right = 0.452
+anchor_bottom = 1.0
+margin_right = 0.151978
+script = ExtResource( 5 )
+
+[node name="container" type="VBoxContainer" parent="panel_option"]
+anchor_left = 0.0388769
+anchor_top = 0.0316667
+anchor_right = 0.961123
+anchor_bottom = 0.968333
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="label" type="Label" parent="panel_option/container"]
+material = ExtResource( 6 )
+margin_right = 427.0
+margin_bottom = 36.0
+custom_fonts/font = ExtResource( 8 )
+text = "NAMA NYA APA"
+
+[connection signal="pressed" from="panel/container/btn_setting" to="." method="_boption_pressed" binds= [ "btn_setting" ]]
+[connection signal="pressed" from="panel/container/btn_about" to="." method="_boption_pressed" binds= [ "btn_about" ]]
 [connection signal="pressed" from="panel/container/btn_exit" to="." method="_keluar"]
