@@ -1,5 +1,6 @@
 ,id,en
 btn_play,MAIN,PLAY
+btn_database,PUSAT DATA,DATABASE
 btn_setting,PENGATURAN,SETTING
 btn_about,TENTANG,ABOUT
 btn_exit,KELUAR,EXIT
@@ -25,3 +26,6 @@ Thafa Fauzanli
 .:: Software ::.
 Godot Game Engine 3.6.2
 Libreoffice Calc 5"
+btn_map,PETA,MAP
+btn_scenario,SKENARIO,SCENARIO
+btn_country,NEGARA,COUNTRY

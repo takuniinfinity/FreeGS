@@ -35,4 +35,5 @@ text = "Indonesia"
 items = [ "Indonesia", null, false, 0, null, "English", null, false, 1, null ]
 selected = 0
 
+[connection signal="tree_exiting" from="." to="." method="_on_setting_tree_exiting"]
 [connection signal="item_selected" from="container/language/OptionButton" to="." method="_on_OptionButton_item_selected"]

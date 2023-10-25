@@ -3,14 +3,20 @@ extends TextureRect
 # OPTION OBJECT
 var opt: Dictionary = {
 	"btn_about" : preload("res://scene/menu/credits.tscn"),
-	"btn_setting" : preload("res://scene/menu/setting.tscn")
+	"btn_setting" : preload("res://scene/menu/setting.tscn"),
+	"btn_database" : preload("res://scene/menu/database.tscn")
 }
+
+var cf: = ConfigFile.new()
 
 var waktu: float = 0.0
 const speed = 0.05
 
 func _ready() -> void:
-	TranslationServer.set_locale("id")
+	cf.load("user://config.ini")
+	var lang = cf.get_value("0", "language", "en")
+	TranslationServer.set_locale(lang)
+	cf.save("user://config.ini")
 	pass
 
 func _process(dt) -> void:
@@ -24,7 +30,6 @@ func _process(dt) -> void:
 func _keluar() -> void: get_tree().quit()
 
 func _boption_pressed(name: String) -> void:
-	print($panel_option.visible)
 	var proses: bool = $panel_option.is_processing()
 	if $panel_option.visible:
 		if $panel_option/container/label.text == name:

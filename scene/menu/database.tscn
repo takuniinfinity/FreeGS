@@ -1,0 +1,36 @@
+[gd_scene format=2]
+
+[node name="database" type="ScrollContainer"]
+margin_right = 12.0
+margin_bottom = 12.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="container" type="VBoxContainer" parent="."]
+margin_right = 93.0
+margin_bottom = 68.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="btn_map" type="Button" parent="container"]
+margin_right = 93.0
+margin_bottom = 20.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "btn_map"
+
+[node name="btn_scenario" type="Button" parent="container"]
+margin_top = 24.0
+margin_right = 93.0
+margin_bottom = 44.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "btn_scenario"
+
+[node name="btn_country" type="Button" parent="container"]
+margin_top = 48.0
+margin_right = 93.0
+margin_bottom = 68.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "btn_country"
