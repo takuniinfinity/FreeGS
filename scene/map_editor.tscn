@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://asset/image/maps/mapindonesia.png" type="Texture" id=1]
+[ext_resource path="res://scene/map_editor.gd" type="Script" id=2]
+
+[node name="map_editor" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="map" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="camera" type="Camera2D" parent="."]
+anchor_mode = 0

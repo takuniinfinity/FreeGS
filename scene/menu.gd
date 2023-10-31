@@ -9,6 +9,10 @@ var opt: Dictionary = {
 
 var cf: = ConfigFile.new()
 
+# CHANGE SCENE
+var scene: String
+var cs: bool = false
+
 var waktu: float = 0.0
 const speed = 0.05
 
@@ -20,12 +24,16 @@ func _ready() -> void:
 	pass
 
 func _process(dt) -> void:
-	if waktu < 1.0:
-		waktu = lerp(waktu, 1.0, speed)
-		$panel.material.set_shader_param("waktu", waktu)
-		for o in $panel/container.get_children():
-			o.material.set_shader_param("waktu", waktu)
-	else: set_process(false)
+	if cs:
+		if modulate.a > 0.01: modulate.a = lerp(modulate.a, 0, speed)
+		else: get_tree().change_scene(scene)
+	else:
+		if waktu < 1.0:
+			waktu = lerp(waktu, 1.0, speed)
+			$panel.material.set_shader_param("waktu", waktu)
+			for o in $panel/container.get_children():
+				o.material.set_shader_param("waktu", waktu)
+		else: set_process(false)
 
 func _keluar() -> void: get_tree().quit()
 
@@ -46,3 +54,8 @@ func _boption_pressed(name: String) -> void:
 		proses = true
 	$panel_option.set_process(proses)
 	$panel_option/container/label.text = name
+
+func change_scene(sc: String) -> void:
+	scene = sc
+	cs = true
+	set_process(true)
