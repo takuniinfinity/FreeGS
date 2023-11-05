@@ -26,6 +26,14 @@ Thafa Fauzanli
 .:: Software ::.
 Godot Game Engine 3.6.2
 Libreoffice Calc 5"
+music_txt,Musik : ,Music : 
 btn_map,PETA,MAP
 btn_scenario,SKENARIO,SCENARIO
 btn_country,NEGARA,COUNTRY
+btn_delete,HAPUS,DELETE
+btn_back,KEMBALI,BACK
+btn_add,TAMBAH,ADD
+btn_select,PILIH,SELECT
+btn_add_city,TAMBAH KOTA,ADD CITY
+btn_select*,[PILIH],[SELECT]
+btn_add_city*,[TAMBAH KOTA],[ADD CITY]

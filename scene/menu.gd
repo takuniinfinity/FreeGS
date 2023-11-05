@@ -16,9 +16,12 @@ var cs: bool = false
 var waktu: float = 0.0
 const speed = 0.05
 
+onready var audio := $audio
+
 func _ready() -> void:
 	cf.load("user://config.ini")
 	var lang = cf.get_value("0", "language", "en")
+	$music.volume_db = cf.get_value("0", "music", 0)
 	TranslationServer.set_locale(lang)
 	cf.save("user://config.ini")
 	pass
@@ -54,6 +57,7 @@ func _boption_pressed(name: String) -> void:
 		proses = true
 	$panel_option.set_process(proses)
 	$panel_option/container/label.text = name
+	audio.play()
 
 func change_scene(sc: String) -> void:
 	scene = sc

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scene/menu.gd" type="Script" id=1]
 [ext_resource path="res://theme/default.tres" type="Theme" id=2]
@@ -10,6 +10,8 @@
 [ext_resource path="res://asset/font/ds_subtitle.tres" type="DynamicFont" id=8]
 [ext_resource path="res://scene/menu/btn_option_mat.tres" type="Material" id=9]
 [ext_resource path="res://scene/menu/panel_mat.tres" type="Material" id=10]
+[ext_resource path="res://asset/audio/effect/click.wav" type="AudioStream" id=11]
+[ext_resource path="res://asset/audio/music/641750__migfus20__epic-orchestra.mp3" type="AudioStream" id=12]
 
 [sub_resource type="Shader" id=1]
 code = "shader_type canvas_item;
@@ -130,6 +132,13 @@ margin_right = 427.0
 margin_bottom = 36.0
 custom_fonts/font = ExtResource( 8 )
 text = "NAMA NYA APA"
+
+[node name="audio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+autoplay = true
 
 [connection signal="pressed" from="panel/container/btn_database" to="." method="_boption_pressed" binds= [ "btn_database" ]]
 [connection signal="pressed" from="panel/container/btn_setting" to="." method="_boption_pressed" binds= [ "btn_setting" ]]

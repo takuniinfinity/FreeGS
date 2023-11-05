@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/641750__migfus20__epic-orchestra.mp3-d0b53e068401b7b854db2b97163386b2.mp3str"
+
+[deps]
+
+source_file="res://asset/audio/music/641750__migfus20__epic-orchestra.mp3"
+dest_files=[ "res://.import/641750__migfus20__epic-orchestra.mp3-d0b53e068401b7b854db2b97163386b2.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

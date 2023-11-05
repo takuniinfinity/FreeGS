@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/586258__migfus20__orchestra-music.mp3-119b003b13311f06d66f45f812f01cec.mp3str"
+
+[deps]
+
+source_file="res://asset/audio/music/586258__migfus20__orchestra-music.mp3"
+dest_files=[ "res://.import/586258__migfus20__orchestra-music.mp3-119b003b13311f06d66f45f812f01cec.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
