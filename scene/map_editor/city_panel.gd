@@ -10,3 +10,6 @@ func _on_btn_close_pressed() -> void: hide()
 func _on_btn_del_pressed() -> void:
 	map_editor.city_select.free()
 	hide()
+
+func _on_city_panel_visibility_changed() -> void:
+	if visible: map_editor._terrain_change(0)

@@ -24,9 +24,8 @@ func _ready() -> void:
 	$music.volume_db = cf.get_value("0", "music", 0)
 	TranslationServer.set_locale(lang)
 	cf.save("user://config.ini")
-	pass
 
-func _process(dt) -> void:
+func _process(dt: float) -> void:
 	if cs:
 		if modulate.a > 0.01: modulate.a = lerp(modulate.a, 0, speed)
 		else: get_tree().change_scene(scene)

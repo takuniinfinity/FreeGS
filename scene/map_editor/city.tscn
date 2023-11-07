@@ -4,10 +4,10 @@
 [ext_resource path="res://scene/map_editor/city.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 32, 32 )
+extents = Vector2( 16, 16 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 32, 32 )
+extents = Vector2( 16, 16 )
 
 [node name="city" type="Sprite"]
 texture = ExtResource( 1 )

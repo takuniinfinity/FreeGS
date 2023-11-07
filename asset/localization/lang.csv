@@ -10,8 +10,8 @@ about_txt,"FreeGS (C) 2023 Takuni Infinity.
 .:: Programmer ::.
 Thafa Fauzanli
 
-.:: Desainer Grafis ::.
-Thafa Fauzanli
+.:: Seniman 2D ::.
+Stable Diffusion AI
 
 .:: Perangkat Lunak ::.
 Godot Game Engine 3.6.2
@@ -20,20 +20,28 @@ Libreoffice Calc 5","FreeGS (C) 2023 Takuni Infinity.
 .:: Programmer ::.
 Thafa Fauzanli
 
-.:: Graphics Designer ::.
-Thafa Fauzanli
+.:: 2D Artist ::.
+Stable Diffusion AI
 
 .:: Software ::.
 Godot Game Engine 3.6.2
 Libreoffice Calc 5"
 music_txt,Musik : ,Music : 
+audio_txt,Suara : ,Audio : 
 btn_map,PETA,MAP
 btn_scenario,SKENARIO,SCENARIO
 btn_country,NEGARA,COUNTRY
 btn_delete,HAPUS,DELETE
 btn_back,KEMBALI,BACK
 btn_add,TAMBAH,ADD
+btn_move,PINDAH,MOVE
 btn_select,PILIH,SELECT
 btn_add_city,TAMBAH KOTA,ADD CITY
 btn_select*,[PILIH],[SELECT]
 btn_add_city*,[TAMBAH KOTA],[ADD CITY]
+rainforest_hint,HUTAN HUJAN TROPIS,TROPICAL RAINFOREST
+desert_hint,GURUN,DESERT
+boreal_hint,HUTAN TAIGA,BOREAL FOREST
+tundra_hint,TUNDRA,TUNDRA
+meadow_hint,PADANG RUMPUT,MEADOW
+ocean_hint,LAUT,OCEAN
