@@ -33,6 +33,7 @@ btn_scenario,SKENARIO,SCENARIO
 btn_country,NEGARA,COUNTRY
 btn_delete,HAPUS,DELETE
 btn_back,KEMBALI,BACK
+btn_edit,UBAH,EDIT
 btn_add,TAMBAH,ADD
 btn_move,PINDAH,MOVE
 btn_select,PILIH,SELECT
